@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.linguaplus.controlador.PrincipalControlador">
+    <top>
+        <VBox styleClass="encabezado" spacing="2">
+            <Label text="LinguaPlus" styleClass="titulo"/>
+            <Label fx:id="lblAcademia" styleClass="subtitulo"/>
+        </VBox>
+    </top>
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+            <Tab text="Estudiantes">
+                <fx:include fx:id="estudiantes" source="estudiantes-view.fxml"/>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>

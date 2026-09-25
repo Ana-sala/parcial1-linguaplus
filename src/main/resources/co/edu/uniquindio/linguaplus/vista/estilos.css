@@ -1,0 +1,104 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 13px;
+    -fx-background-color: #F4F6FB;
+}
+.encabezado {
+    -fx-background-color: linear-gradient(to right, #2C3E91, #4A63D1);
+    -fx-padding: 18 28;
+}
+.titulo {
+    -fx-text-fill: white;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+.subtitulo {
+    -fx-text-fill: #DCE3FF;
+    -fx-font-size: 13px;
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: white;
+}
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-padding: 8 18;
+}
+.tab-pane .tab:selected {
+    -fx-border-color: transparent transparent #F2A93B transparent;
+    -fx-border-width: 0 0 3 0;
+}
+.tab-pane .tab .tab-label {
+    -fx-text-fill: #5B6275;
+    -fx-font-weight: bold;
+}
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #2C3E91;
+}
+.tarjeta {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-effect: dropshadow(gaussian, rgba(30, 40, 90, 0.10), 14, 0, 0, 3);
+}
+.tarjeta-titulo {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E91;
+}
+.etiqueta {
+    -fx-text-fill: #5B6275;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+.text-field, .combo-box, .date-picker, .text-area {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #D5DAE8;
+    -fx-background-color: white;
+}
+.text-field:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: #4A63D1;
+}
+.boton-primario {
+    -fx-background-color: #2C3E91;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 9 18;
+    -fx-cursor: hand;
+}
+.boton-primario:hover {
+    -fx-background-color: #4A63D1;
+}
+.boton-secundario {
+    -fx-background-color: #F2A93B;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 9 18;
+    -fx-cursor: hand;
+}
+.table-view {
+    -fx-background-radius: 8;
+    -fx-border-color: #E3E7F2;
+    -fx-border-radius: 8;
+}
+.table-view .column-header {
+    -fx-background-color: #EEF1FA;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #2C3E91;
+    -fx-font-weight: bold;
+}
+.table-row-cell:selected {
+    -fx-background-color: #4A63D1;
+}
+.mensaje-exito {
+    -fx-text-fill: #1E8E5A;
+    -fx-font-weight: bold;
+}
+.mensaje-error {
+    -fx-text-fill: #D64545;
+    -fx-font-weight: bold;
+}

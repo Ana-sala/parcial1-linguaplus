@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.linguaplus.controlador.EstudiantesControlador"
+      spacing="20">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <VBox styleClass="tarjeta" prefWidth="320" minWidth="300">
+        <Label text="Nuevo estudiante" styleClass="tarjeta-titulo"/>
+        <Label text="Nombre completo" styleClass="etiqueta"/>
+        <TextField fx:id="txtNombre" promptText="Ej: Maria Lopez"/>
+        <Label text="Documento" styleClass="etiqueta"/>
+        <TextField fx:id="txtDocumento" promptText="Ej: 1094..."/>
+        <Label text="Telefono" styleClass="etiqueta"/>
+        <TextField fx:id="txtTelefono" promptText="Ej: 3101234567"/>
+        <Label text="Correo" styleClass="etiqueta"/>
+        <TextField fx:id="txtCorreo" promptText="Ej: maria@mail.com"/>
+        <Label text="Edad" styleClass="etiqueta"/>
+        <TextField fx:id="txtEdad" promptText="Ej: 21"/>
+        <Button text="Registrar estudiante" styleClass="boton-primario"
+                maxWidth="Infinity" onAction="#registrarEstudiante"/>
+        <Label fx:id="lblMensaje" wrapText="true"/>
+    </VBox>
+
+    <VBox styleClass="tarjeta" HBox.hgrow="ALWAYS">
+        <Label text="Estudiantes registrados" styleClass="tarjeta-titulo"/>
+        <TableView fx:id="tblEstudiantes" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="170"/>
+                <TableColumn fx:id="colDocumento" text="Documento" prefWidth="100"/>
+                <TableColumn fx:id="colTelefono" text="Telefono" prefWidth="110"/>
+                <TableColumn fx:id="colCorreo" text="Correo" prefWidth="160"/>
+                <TableColumn fx:id="colEdad" text="Edad" prefWidth="60"/>
+                <TableColumn fx:id="colFecha" text="Registro" prefWidth="100"/>
+            </columns>
+            <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+        </TableView>
+    </VBox>
+</HBox>

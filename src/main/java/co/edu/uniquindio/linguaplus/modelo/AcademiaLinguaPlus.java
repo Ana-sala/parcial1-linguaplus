@@ -28,7 +28,23 @@ public class AcademiaLinguaPlus {
         this.web = web;
     }
 
-    public void registrarEstudiante(Estudiante e) { estudiantes.add(e); }
+    public void registrarEstudiante(Estudiante e) {
+        if (e.getNombreCompleto() == null || e.getNombreCompleto().isBlank()) {
+            throw new IllegalStateException("El estudiante requiere un nombre");
+        }
+        if (e.getIdentificacion() == null || e.getIdentificacion().isBlank()) {
+            throw new IllegalStateException("El estudiante requiere un documento");
+        }
+        if (e.getTelefono() == null || e.getTelefono().isBlank()) {
+            throw new IllegalStateException("El estudiante requiere un telefono");
+        }
+        for (Estudiante existente : estudiantes) {
+            if (existente.getIdentificacion().equals(e.getIdentificacion())) {
+                throw new IllegalStateException("Ya existe un estudiante con documento " + e.getIdentificacion());
+            }
+        }
+        estudiantes.add(e);
+    }
     public void registrarDocente(Docente d) { docentes.add(d); }
     public void registrarPrograma(ProgramaFormacion p) { programas.add(p); }
     public void registrarServicio(ServicioAdicional s) { servicios.add(s); }
