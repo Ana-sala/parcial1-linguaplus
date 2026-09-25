@@ -51,6 +51,9 @@ public class AcademiaLinguaPlus {
 
     /** Ocupa el cupo en la oferta del periodo (RN-06) y guarda la matricula. */
     public void registrarMatricula(Matricula m, OfertaPeriodo oferta) {
+        if (oferta == null) {
+            throw new IllegalStateException("Seleccione el periodo de la oferta");
+        }
         oferta.buscarCupo(m.getPrograma().getCodigo()).ocuparCupo();
         matriculas.add(m);
     }

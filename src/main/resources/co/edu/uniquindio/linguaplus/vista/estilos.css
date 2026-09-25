@@ -102,3 +102,20 @@
     -fx-text-fill: #D64545;
     -fx-font-weight: bold;
 }
+.scroll-transparente, .scroll-transparente > .viewport {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+.comprobante {
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 12px;
+}
+.kit {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2C3E91;
+    -fx-line-spacing: 4;
+}
+.nota {
+    -fx-text-fill: #5B6275;
+    -fx-font-style: italic;
+}

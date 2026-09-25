@@ -15,6 +15,12 @@
             <Tab text="Estudiantes">
                 <fx:include fx:id="estudiantes" source="estudiantes-view.fxml"/>
             </Tab>
+            <Tab text="Programas y oferta">
+                <fx:include fx:id="programas" source="programas-view.fxml"/>
+            </Tab>
+            <Tab text="Matriculas">
+                <fx:include fx:id="matriculas" source="matriculas-view.fxml"/>
+            </Tab>
         </TabPane>
     </center>
 </BorderPane>

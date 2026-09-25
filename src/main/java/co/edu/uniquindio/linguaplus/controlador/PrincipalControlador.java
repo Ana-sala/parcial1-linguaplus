@@ -12,15 +12,22 @@ public class PrincipalControlador {
     @FXML private Label lblAcademia;
     @FXML private TabPane tabPane;
     @FXML private EstudiantesControlador estudiantesController;
+    @FXML private ProgramasControlador programasController;
+    @FXML private MatriculasControlador matriculasController;
 
     public void inicializar(AcademiaLinguaPlus academia, List<OfertaPeriodo> ofertas) {
         lblAcademia.setText("NIT " + academia.getNit() + "  ·  " + academia.getDireccion()
                 + "  ·  " + academia.getWeb());
         estudiantesController.inicializar(academia);
+        programasController.inicializar(academia, ofertas);
+        matriculasController.inicializar(academia, ofertas);
         tabPane.getSelectionModel().selectedItemProperty().addListener((obs, antes, ahora) -> refrescar());
     }
 
+    /** Al cambiar de pestana, cada una vuelve a leer el modelo. */
     private void refrescar() {
         estudiantesController.refrescar();
+        programasController.refrescar();
+        matriculasController.refrescar();
     }
 }

@@ -24,5 +24,7 @@ public class ServicioAdicional {
     public void setDisponible(boolean disponible) { this.disponible = disponible; }
 
     @Override
-    public String toString() { return nombre + " ($" + precio + ")"; }
+    public String toString() {
+        return nombre + String.format(" ($%,.0f)", precio) + (disponible ? "" : " - no disponible");
+    }
 }

@@ -40,6 +40,9 @@ public class OfertaPeriodo implements Cloneable {
         return copia;
     }
 
+    @Override
+    public String toString() { return periodo; }
+
     public boolean compartenCupos(OfertaPeriodo otra) { return this.cupos == otra.cupos; }
     public String getPeriodo() { return periodo; }
     public void setPeriodo(String periodo) { this.periodo = periodo; }
