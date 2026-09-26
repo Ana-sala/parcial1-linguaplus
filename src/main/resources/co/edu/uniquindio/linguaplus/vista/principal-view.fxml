@@ -21,6 +21,9 @@
             <Tab text="Matriculas">
                 <fx:include fx:id="matriculas" source="matriculas-view.fxml"/>
             </Tab>
+            <Tab text="Consultas">
+                <fx:include fx:id="consultas" source="consultas-view.fxml"/>
+            </Tab>
         </TabPane>
     </center>
 </BorderPane>

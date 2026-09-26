@@ -119,3 +119,24 @@
     -fx-text-fill: #5B6275;
     -fx-font-style: italic;
 }
+.insignia-si {
+    -fx-background-color: #E3F6EC;
+    -fx-text-fill: #1E8E5A;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-background-radius: 20;
+}
+.insignia-no {
+    -fx-background-color: #FDECEC;
+    -fx-text-fill: #D64545;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-background-radius: 20;
+}
+.cifra {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E91;
+}

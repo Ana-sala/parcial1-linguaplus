@@ -94,6 +94,12 @@ public class AcademiaLinguaPlus {
     }
 
     public double calcularIngresosPeriodo(LocalDate inicio, LocalDate fin) {
+        if (inicio == null || fin == null) {
+            throw new IllegalStateException("Seleccione las dos fechas del periodo");
+        }
+        if (inicio.isAfter(fin)) {
+            throw new IllegalStateException("La fecha inicial no puede ser posterior a la final");
+        }
         double total = 0;
         for (Matricula m : matriculas) {
             LocalDate f = m.getFechaInicio();

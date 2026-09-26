@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.linguaplus.controlador.ConsultasControlador"
+      spacing="20">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <VBox styleClass="tarjeta" HBox.hgrow="ALWAYS">
+        <Label text="Buscar estudiante por telefono" styleClass="tarjeta-titulo"/>
+        <Label styleClass="nota" wrapText="true"
+               text="Un numero es perfecto si es igual a la suma de sus divisores propios. Ej: 28 = 1 + 2 + 4 + 7 + 14"/>
+        <Label text="Telefono" styleClass="etiqueta"/>
+        <HBox spacing="8">
+            <TextField fx:id="txtTelefono" promptText="Ej: 8589869056" HBox.hgrow="ALWAYS"/>
+            <Button text="Buscar" styleClass="boton-primario" onAction="#buscarEstudiante"/>
+        </HBox>
+        <Label fx:id="lblEstudiante" wrapText="true" styleClass="tarjeta-titulo"/>
+        <Label fx:id="lblPerfecto"/>
+    </VBox>
+
+    <VBox styleClass="tarjeta" HBox.hgrow="ALWAYS">
+        <Label text="Ingresos por periodo" styleClass="tarjeta-titulo"/>
+        <Label styleClass="nota" wrapText="true"
+               text="Suma el valor total de las matriculas cuya fecha de inicio esta dentro del rango."/>
+        <Label text="Desde" styleClass="etiqueta"/>
+        <DatePicker fx:id="dpDesde" maxWidth="Infinity"/>
+        <Label text="Hasta" styleClass="etiqueta"/>
+        <DatePicker fx:id="dpHasta" maxWidth="Infinity"/>
+        <Button text="Calcular ingresos" styleClass="boton-secundario"
+                maxWidth="Infinity" onAction="#calcularIngresos"/>
+        <Label fx:id="lblIngresos" styleClass="cifra"/>
+        <Label fx:id="lblMensaje" wrapText="true"/>
+    </VBox>
+</HBox>

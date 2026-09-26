@@ -14,6 +14,7 @@ public class PrincipalControlador {
     @FXML private EstudiantesControlador estudiantesController;
     @FXML private ProgramasControlador programasController;
     @FXML private MatriculasControlador matriculasController;
+    @FXML private ConsultasControlador consultasController;
 
     public void inicializar(AcademiaLinguaPlus academia, List<OfertaPeriodo> ofertas) {
         lblAcademia.setText("NIT " + academia.getNit() + "  ·  " + academia.getDireccion()
@@ -21,6 +22,7 @@ public class PrincipalControlador {
         estudiantesController.inicializar(academia);
         programasController.inicializar(academia, ofertas);
         matriculasController.inicializar(academia, ofertas);
+        consultasController.inicializar(academia);
         tabPane.getSelectionModel().selectedItemProperty().addListener((obs, antes, ahora) -> refrescar());
     }
 
